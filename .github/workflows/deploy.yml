@@ -28,7 +28,7 @@ jobs:
       - run: pnpm build
 
       - name: Deploy to VPS
-        uses: burnett01/rsync-deployments@7.0.1
+        uses: burnett01/rsync-deployments@8.0.4
         with:
           switches: -avzr --delete
           path: dist/
