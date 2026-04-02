@@ -24,23 +24,23 @@ jobs:
       - run: pnpm lint
       - run: pnpm build
 
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
+
   lighthouse:
     needs: lint-build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - uses: pnpm/action-setup@v4
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
         with:
-          version: 9
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: pnpm
-
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm build
+          name: dist
+          path: dist/
 
       - name: Lighthouse CI
         uses: treosh/lighthouse-ci-action@v12
