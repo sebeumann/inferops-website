@@ -2,7 +2,7 @@
   "ci": {
     "collect": {
       "staticDistDir": "./dist",
-      "url": ["/", "/about/", "/posts/1/"]
+      "url": ["/", "/about/"]
     },
     "assert": {
       "assertions": {

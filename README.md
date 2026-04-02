@@ -8,8 +8,6 @@ Built with [Astro](https://astro.build/) + [AstroPaper](https://github.com/satna
 
 - `main` — production (protected, deploys automatically)
 - `dev` — integration branch for co-development
-- `feat/*` — feature branches
-- `draft/*` — blog post drafts
 
 ## License
 
