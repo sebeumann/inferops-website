@@ -26,13 +26,7 @@ const { noMarginTop = false, class: className, ...attrs } = Astro.props;
     <div class="my-2 flex flex-col items-center whitespace-nowrap sm:flex-row">
       <span>Copyright &#169; {currentYear}</span>
       <span class="hidden sm:inline">&nbsp;|&nbsp;</span>
-      <span>All rights reserved.</span>
-      <span class="hidden sm:inline">&nbsp;|&nbsp;</span>
-      <span class="flex gap-2">
-        <a href="/imprint" class="hover:text-accent">Imprint</a>
-        <span>·</span>
-        <a href="/privacy" class="hover:text-accent">Privacy</a>
-      </span>
+      <a href="/imprint" class="hover:text-accent">Imprint</a>
     </div>
   </div>
 </footer>
