@@ -3,22 +3,38 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-**inferops** helps teams build and operate production ML systems — from model training pipelines to real-time inference at scale.
+<div class="not-prose mb-8">
+  <img src="/sebastian-eumann-inferops.png" alt="Sebastian Eumann" class="mx-auto w-full max-w-xl rounded-lg" />
+</div>
 
-We write about **MLOps**, **LLMOps**, and **AI infrastructure**: the tooling, patterns, and architecture decisions that turn ML experiments into reliable production services.
+Hi, I'm Sebastian. I've been working on and with AI before that was even a big thing, let alone a job title. As an aerospace engineer, I spent my early career on simulation and large-scale computing — the kind of work where you learn to respect what happens when models meet reality. From there I moved into program and product management, which pulled me into cloud engineering, AI infrastructure, and finally MLOps, and eventually into designing, building, and architecting GenAI solutions end to end. Not just making them work, but keeping them alive in production, which, as anyone who's tried it knows, is where the real fun starts.
 
-## What we cover
+## Freelance consulting & solution architecture
 
-- Model serving and inference optimization
-- ML pipeline orchestration on Kubernetes
-- LLM deployment patterns (RAG, fine-tuning, prompt management)
-- Feature stores and data pipelines
-- GPU cost optimization
-- Observability and monitoring for ML systems
-- Platform engineering for AI teams
+Over the past four years as a freelance consultant and solution architect, I've helped enterprise customers across manufacturing, energy, and public sector building internal AI platforms, setting up GPU clusters and LLM inference pipelines, integrating RAG into real workflows, and getting all of that through compliance in regulated environments. I've built solutions that went productive and stayed in production: an AI-as-a-Service platform serving 10,000+ users on fully on-premise, sovereign infrastructure, running on OpenShift with dedicated GPU nodes, container-native model serving, and automated retraining pipelines. The kind of setup where observability, resource scheduling, and rollback strategies matter more than which foundation model you pick.
 
-## Get in touch
+## Industry & automotive background
 
-Have a question or want to collaborate? Reach out via [email](mailto:hello@inferops.dev) or connect on [LinkedIn](https://www.linkedin.com/in/YOUR_LINKEDIN/).
+Before going freelance, I spent years in German industry and automotive, where I shipped IoT platforms that actually made it to production across 200+ manufacturing sites, built out MLOps toolchains for industrial AI at scale, and connected IT and OT in environments where "just deploy it to the cloud" was never an option. That background is probably why I still instinctively think about failure modes before features.
 
-Subscribe to the [RSS feed](/rss.xml) to stay up to date.
+## Why this blog
+
+As an engineer by training, I can talk to fellow engineers without making them nervous, and I still enjoy problems that sit right at the intersection of hardware constraints and software ambition.
+
+I'm starting this blog to reflect on what I experience daily. I want to give you the honest truth about the things that don't work in enterprise AI, and share what actually does, especially when it comes to building production-ready clusters, inference infrastructure, and platforms that survive contact with real users and real compliance requirements.
+
+<div class="mt-8 flex flex-wrap items-center gap-4">
+  <span class="not-prose font-normal" style="font-size: inherit; color: inherit;">Let's connect:</span>
+  <a href="https://github.com/sebeumann" target="_blank" rel="noopener noreferrer" title="GitHub" class="inline-flex items-center gap-1.5 rounded-lg border border-skin-line px-3 py-1.5 text-sm no-underline opacity-80 transition-all hover:border-skin-accent hover:text-skin-accent hover:opacity-100">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"/></svg>
+    GitHub
+  </a>
+  <a href="https://x.com/sebeumann" target="_blank" rel="noopener noreferrer" title="X" class="inline-flex items-center gap-1.5 rounded-lg border border-skin-line px-3 py-1.5 text-sm no-underline opacity-80 transition-all hover:border-skin-accent hover:text-skin-accent hover:opacity-100">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg>
+    X
+  </a>
+  <a href="mailto:sebastian@inferops.dev" title="Email" class="inline-flex items-center gap-1.5 rounded-lg border border-skin-line px-3 py-1.5 text-sm no-underline opacity-80 transition-all hover:border-skin-accent hover:text-skin-accent hover:opacity-100">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"/><path d="M3 7l9 6l9 -6"/></svg>
+    Email
+  </a>
+</div>

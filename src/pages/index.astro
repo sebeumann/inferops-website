@@ -9,10 +9,11 @@ import { Image } from "astro:assets";
 import profileImg from "@/assets/images/profile-sebastian-eumann.png";
 
 // ── Editable content ──────────────────────────────────────────────────────────
-const HEADLINE = "Building reliable AI infrastructure.";
-const CONTACT_EMAIL = "hubert@inferops.dev";
-const GITHUB_URL = "#"; // TODO: replace with real URL
-const X_URL = "#"; // TODO: replace with real URL
+const HEADLINE =
+  "From GPU clusters to inference pipelines: what it actually takes to run AI in production.";
+const CONTACT_EMAIL = "sebastian@inferops.dev";
+const GITHUB_URL = "https://github.com/sebeumann";
+const X_URL = "https://x.com/sebeumann";
 // ─────────────────────────────────────────────────────────────────────────────
 
 const posts = await getCollection("blog");
@@ -32,37 +33,35 @@ function fmtDate(date: Date): string {
   <main id="main-content" data-layout="index" class="app-layout">
     <div class="mx-auto max-w-[680px]">
       <!-- 1. Hero -->
-      <section id="hero" class="border-border border-b pt-12 pb-10">
+      <section id="hero" class="border-b border-border pt-12 pb-10">
         <div class="flex items-start justify-between gap-6">
           <div class="flex-1">
             <h1
-              class="text-foreground mb-4 text-[22px] font-medium tracking-[-0.3px]"
+              class="mb-4 text-[22px] font-medium tracking-[-0.3px] text-foreground"
             >
               {HEADLINE}
             </h1>
-            <p class="text-foreground/65 mb-5 text-[15px] leading-[1.7]">
-              {"I'm "}
-              <span class="text-foreground font-medium">Hubert</span>
+            <p class="mb-5 text-[15px] leading-[1.7] text-foreground/65">
               {
-                " — an MLOps and AI infrastructure engineer. I write about the systems behind production ML: model serving, inference pipelines, platform engineering, and operational patterns that hold up under real workloads."
+                "I build and architect enterprise-grade AI infrastructure, on-premise and in the cloud. From production ready GPU clusters, LLM serving, RAG and agentic pipelines, MLOps, LLMOps, CI/CD, to full platform and AI system engineering. This blog is about the things nobody warns you about: building for production, and keeping it there."
               }
             </p>
             <div class="flex gap-5 text-[13px]">
               <a
                 href={GITHUB_URL}
-                class="text-foreground/65 border-foreground/30 hover:border-foreground/60 border-b pb-px transition-colors"
+                class="border-b border-foreground/30 pb-px text-foreground/65 transition-colors hover:border-foreground/60"
               >
                 GitHub
               </a>
               <a
                 href={X_URL}
-                class="text-foreground/65 border-foreground/30 hover:border-foreground/60 border-b pb-px transition-colors"
+                class="border-b border-foreground/30 pb-px text-foreground/65 transition-colors hover:border-foreground/60"
               >
                 X
               </a>
               <a
                 href={`mailto:${CONTACT_EMAIL}`}
-                class="text-foreground/65 border-foreground/30 hover:border-foreground/60 border-b pb-px transition-colors"
+                class="border-b border-foreground/30 pb-px text-foreground/65 transition-colors hover:border-foreground/60"
               >
                 Email
               </a>
@@ -71,40 +70,51 @@ function fmtDate(date: Date): string {
           <Image
             src={profileImg}
             alt="Profile photo"
-            width={240}
-            height={240}
-            class="hidden h-60 w-60 shrink-0 rounded-full object-cover sm:block"
+            width={212}
+            height={212}
+            class="-mt-1 hidden h-53 w-53 shrink-0 rounded-full object-cover sm:block"
           />
         </div>
       </section>
 
       <!-- 2. Work with me -->
-      <section id="work-with-me" class="border-border border-b pt-8 pb-10">
+      <section id="work-with-me" class="border-b border-border pt-8 pb-10">
         <p
-          class="text-foreground mb-4 text-[16px] font-medium uppercase tracking-[0.8px]"
+          class="mb-4 text-[16px] font-medium tracking-[0.8px] text-foreground uppercase"
         >
           WORK WITH ME
         </p>
-        <p
-          class="text-foreground/65 mb-4 max-w-[560px] text-[15px] leading-[1.7]"
-        >
-          {"I help engineering teams design, build, and operate ML platforms and inference infrastructure. Previous clients include "}
-          <span class="text-foreground">Siemens</span>
-          {", "}
-          <span class="text-foreground">Bosch</span>
-          {", and "}
-          <span class="text-foreground">IT.NRW</span>
-          {"."}
-        </p>
-        <p class="text-foreground/65 max-w-[560px] text-[15px] leading-[1.7]">
+        <p class="mb-4 text-[15px] leading-[1.7] text-foreground/65">
           {
-            "If you're looking for hands-on support or advisory on AI infrastructure, reach out at "
+            "If you want to figure things out yourself, the blog is here for that. Real problems and real solutions."
           }
+        </p>
+        <p class="mb-4 text-[15px] leading-[1.7] text-foreground/65">
+          {
+            "If you need someone to actually build it, I help enterprises design and implement AI platforms, inference infrastructure, and MLOps pipelines from architecture to production. Cloud-native engineering, Kubernetes, GPU scheduling, model serving, monitoring and observability, CI/CD for ML workloads, infrastructure as code, and the DevOps glue that holds it all together."
+          }
+        </p>
+        <p class="text-[15px] leading-[1.7] text-foreground/65">
+          {"Feel free to reach out on "}
+          <a
+            href={X_URL}
+            class="border-b border-foreground/50 pb-px text-foreground/75 transition-colors hover:border-foreground/80"
+          >
+            X
+          </a>
+          {", "}
+          <a
+            href={GITHUB_URL}
+            class="border-b border-foreground/50 pb-px text-foreground/75 transition-colors hover:border-foreground/80"
+          >
+            GitHub
+          </a>
+          {" or directly via "}
           <a
             href={`mailto:${CONTACT_EMAIL}`}
-            class="text-foreground/75 border-foreground/50 hover:border-foreground/80 border-b pb-px transition-colors"
+            class="border-b border-foreground/50 pb-px text-foreground/75 transition-colors hover:border-foreground/80"
           >
-            {CONTACT_EMAIL}
+            Email
           </a>
           {"."}
         </p>
@@ -114,13 +124,13 @@ function fmtDate(date: Date): string {
       <section id="recent-writing" class="pt-8 pb-10">
         <div class="mb-1 flex items-center justify-between">
           <p
-            class="text-foreground text-[16px] font-medium uppercase tracking-[0.8px]"
+            class="text-[16px] font-medium tracking-[0.8px] text-foreground uppercase"
           >
             RECENT WRITING
           </p>
           <a
             href="/posts/"
-            class="text-foreground/65 border-foreground/30 hover:border-foreground/60 border-b pb-px text-[13px] transition-colors"
+            class="border-b border-foreground/30 pb-px text-[13px] text-foreground/65 transition-colors hover:border-foreground/60"
           >
             All posts →
           </a>
@@ -128,11 +138,11 @@ function fmtDate(date: Date): string {
         <ul>
           {
             recentPosts.map(post => (
-              <li class="border-border flex items-start justify-between gap-6 border-b py-[14px]">
+              <li class="flex items-start justify-between gap-6 border-b border-border py-[14px]">
                 <div class="min-w-0">
                   <a
                     href={`/posts/${post.id}/`}
-                    class="text-foreground hover:text-accent text-[15px] font-medium transition-colors"
+                    class="text-[15px] font-medium text-foreground transition-colors hover:text-accent"
                   >
                     {post.data.title}
                   </a>
@@ -141,7 +151,7 @@ function fmtDate(date: Date): string {
                       {post.data.tags.map(tag => (
                         <a
                           href={`/tags/${slugifyStr(tag)}/`}
-                          class="text-foreground/50 bg-muted hover:text-foreground/70 rounded-sm px-2 py-0.5 text-[12px] transition-colors"
+                          class="rounded-sm bg-muted px-2 py-0.5 text-[12px] text-foreground/50 transition-colors hover:text-foreground/70"
                         >
                           {tag}
                         </a>
@@ -151,7 +161,7 @@ function fmtDate(date: Date): string {
                 </div>
                 <time
                   datetime={post.data.pubDatetime.toISOString()}
-                  class="text-foreground/45 mt-0.5 ml-4 shrink-0 whitespace-nowrap text-[13px]"
+                  class="mt-0.5 ml-4 shrink-0 text-[13px] whitespace-nowrap text-foreground/45"
                 >
                   {fmtDate(post.data.pubDatetime)}
                 </time>
