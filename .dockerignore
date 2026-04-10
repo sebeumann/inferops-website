@@ -1,0 +1,13 @@
+.git
+.github
+.claude
+node_modules
+dist
+.astro
+.vscode
+.idea
+*.log
+.DS_Store
+infra
+README.md
+lighthouserc.json
